@@ -21,7 +21,7 @@ Or manually [download]() it.
 Import
 
 ```javascript
-import Router from 'currencyfy'
+import currencyfy from 'currencyfy'
 ```
 
 Or link `currencyfy.js` in your HTML:
