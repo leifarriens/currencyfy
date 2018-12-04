@@ -1,0 +1,12 @@
+{
+  "name": "currencyfy",
+  "version": "0.0.1",
+  "description": "convert numbers to currency",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel build index.js --no-cache"
+  },
+  "keywords": [],
+  "author": "Leif Arriens",
+  "license": "MIT"
+}
