@@ -21,7 +21,7 @@ Or manually [download]() it.
 Import
 
 ```javascript
-import currencyfy from 'currencyfy'
+import Router from 'currencyfy'
 ```
 
 Or link `currencyfy.js` in your HTML:
@@ -30,10 +30,10 @@ Or link `currencyfy.js` in your HTML:
 <script src="currencyfy.js"></script>
 ```
 
-2. Currify your number
+2. Currencyfy your number
 
 ```javascript
-currify(19.9, '€');
+currencyfy(19.9, '€');
 ```
 
 becomes
@@ -44,7 +44,7 @@ becomes
 
 3. Use custom settings
 ```javascript
-currify(23, '€', {
+currencyfy(23, '€', {
   before: true,
   showzero: false
 });
