@@ -1,4 +1,4 @@
-const currify = function (number, currency, options) {
+const currencyfy = function (number, currency, options) {
 
   // validate number
   if (isNaN(number)) {
@@ -42,4 +42,4 @@ const currify = function (number, currency, options) {
   }
 }
 
-module.exports = currify;
+module.exports = currencyfy;
