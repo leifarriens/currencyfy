@@ -1,7 +1,7 @@
 {
   "name": "currencyfy",
   "version": "0.0.2",
-  "description": "convert numbers to currency",
+  "description": "convert numbers to displayable currency",
   "main": "index.js",
   "scripts": {
     "start": "parcel build index.js --no-cache"

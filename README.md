@@ -1,6 +1,6 @@
 # currencyfy
 
-_convert numbers to currency_
+_convert numbers to displayable currency_
 
 `currencyfy` will convert your numbers to currency
 
