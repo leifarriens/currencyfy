@@ -27,7 +27,7 @@ import currencyfy from 'currencyfy'
 Require
 
 ```javascript
-const currencyfy = require('currencyfy)
+const currencyfy = require('currencyfy')
 ```
 
 2. Currencyfy your number
