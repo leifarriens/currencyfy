@@ -22,9 +22,9 @@ const currencyfy = function (number, currency, options) {
     } else {
       // check for options
       if (options) {
-        Object.assign(settings, settings, options);
+        // assign custom options to settings
+        settings = {...settings, ...options}
       }
-      console.log(settings);
 
       // split decimal .
       let split = number.toString().split('.');

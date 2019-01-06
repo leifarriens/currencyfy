@@ -30,6 +30,12 @@ Require
 const currencyfy = require('currencyfy')
 ```
 
+Or link `currencyfy.js` in your HTML:
+
+```html
+<script src="currencyfy.min.js">
+```
+
 2. Currencyfy your number
 
 ```javascript

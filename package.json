@@ -2,11 +2,11 @@
   "name": "currencyfy",
   "version": "0.0.6",
   "description": "convert numbers to displayable currency",
-  "main": "index.js",
+  "main": "currencyfy.min.js",
   "scripts": {
     "start": "npm run test",
     "test": "nodemon index.test.js",
-    "build": "parcel build index.js --no-source-maps --no-cache --out-file currencyfy.min.js --out-dir ./"
+    "build": "parcel build index.js --no-source-maps --no-cache --global currencyfy --out-file currencyfy.min.js --out-dir ./"
   },
   "keywords": ["currency", "number", "convert"],
   "author": "Leif Arriens",
