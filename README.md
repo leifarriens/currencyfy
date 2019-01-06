@@ -12,7 +12,7 @@ This is a [Node.js](https://nodejs.org) module available through the [npm regist
 $ npm install currencyfy
 ```
 
-Or manually [download]() it.
+Or manually [download](https://github.com/leifarriens/currencyfy/blob/master/currencyfy.min.js) it.
 
 ## Usage
 

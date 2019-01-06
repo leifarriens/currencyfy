@@ -4,10 +4,11 @@
   "description": "convert numbers to displayable currency",
   "main": "index.js",
   "scripts": {
-    "start": "parcel build index.js --no-cache",
-    "test": "nodemon index.test.js"
+    "start": "npm run test",
+    "test": "nodemon index.test.js",
+    "build": "parcel build index.js --no-source-maps --no-cache --out-file currencyfy.min.js --out-dir ./"
   },
-  "keywords": [],
+  "keywords": ["currency", "number", "convert"],
   "author": "Leif Arriens",
   "license": "MIT"
 }
