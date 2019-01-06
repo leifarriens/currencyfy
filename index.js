@@ -1,12 +1,33 @@
 const currencyfy = function (number, currency, options) {
 
+  let settings = { // default parameters
+    before: false,
+    gap: true,
+    showzero: false,
+    spacer: ','
+  };
+
   // validate number
-  if (isNaN(number)) {
+  if (isNaN(number) || typeof number === 'boolean' ) {
     // invalid number
     console.error(`"${number}" is not a valid number`);
-    return null;
+    return '';
   } else {
     // number is valid
+
+    // validate currency
+    if(isNaN(currency)) {
+      console.log(`is currency`);
+    } else {
+      console.error(`"${currency}" is not a valid currency. You may have written your decimal separator as "," instead of "."`);
+      return '';
+    }
+
+    // check for options
+    if(options) {
+      Object.assign(settings, settings, options);
+    }
+    console.log(settings);
 
     // split decimal .
     let split = number.toString().split('.');
@@ -20,7 +41,7 @@ const currencyfy = function (number, currency, options) {
       }
     }
     if (split.length <= 1) {
-      if (!options.showzero) {
+      if (!settings.showzero) {
         split[1] = '-';
       } else {
         split[1] = '00';
@@ -28,8 +49,8 @@ const currencyfy = function (number, currency, options) {
     }
 
     let spacer;
-    if(options.spacer) {
-      spacer = options.spacer;
+    if(settings.spacer) {
+      spacer = settings.spacer;
     } else {
       spacer = ',';
     }
@@ -37,15 +58,15 @@ const currencyfy = function (number, currency, options) {
 
     // OPTION GAP
     const gap = () => {
-      if(options.gap == null) {
+      if(settings.gap == null) {
         return ' ';
-      } else if(!options.gap) return ''
+      } else if(!settings.gap) return ''
       else return ' ';
     }
 
     const numberString = `${split[0]}${spacer}${split[1]}`;
 
-    if (options.before) {
+    if (settings.before) {
       return `${currency}${gap()}${numberString}`;
     } else {
       return `${numberString}${gap()}${currency}`;

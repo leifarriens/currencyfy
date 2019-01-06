@@ -24,10 +24,10 @@ Import
 import currencyfy from 'currencyfy'
 ```
 
-Or link `currencyfy.js` in your HTML:
+Require
 
-```html
-<script src="currencyfy.js"></script>
+```javascript
+const currencyfy = require('currencyfy)
 ```
 
 2. Currencyfy your number
@@ -36,22 +36,30 @@ Or link `currencyfy.js` in your HTML:
 currencyfy(19.9, '€');
 ```
 
-becomes
+converts to
 
 ```bash
-19,99 €
+19,90 €
 ```
 
 3. Use custom settings
 ```javascript
 currencyfy(23, '€', {
   before: true,
-  showzero: false
 });
 ```
 
-becomes
+converts to
 
 ```bash
 € 23,-
 ```
+
+4. Custom Settings
+
+| parameter | value | default |
+| ---------- | ---------- | ---------- |
+| `before`   | `boolean`  | `false`    | 
+| `gap`      | `boolean`  | `true`     | 
+| `showzero` | `boolean`  | `false`    | 
+| `spacer`   | `string`   | `,`        | 
