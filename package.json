@@ -1,12 +1,17 @@
 {
   "name": "currencyfy",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "convert numbers to displayable currency",
   "main": "currencyfy.min.js",
   "scripts": {
     "start": "npm run test",
     "test": "nodemon index.test.js",
     "build": "parcel build index.js --no-source-maps --no-cache --global currencyfy --out-file currencyfy.min.js --out-dir ./"
+  },
+  "homepage": "https://github.com/leifarriens/currencyfy#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/leifarriens/currencyfy.git"
   },
   "keywords": ["currency", "number", "convert"],
   "author": "Leif Arriens",

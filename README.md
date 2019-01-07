@@ -30,7 +30,7 @@ Require
 const currencyfy = require('currencyfy')
 ```
 
-Or link `currencyfy.js` in your HTML:
+Or link `currencyfy.min.js` in your HTML:
 
 ```html
 <script src="currencyfy.min.js">
@@ -48,7 +48,8 @@ converts to
 19,90 €
 ```
 
-3. Use custom settings
+
+#### Custom settings
 ```javascript
 currencyfy(23, '€', {
   before: true,
@@ -61,7 +62,6 @@ converts to
 € 23,-
 ```
 
-4. Custom Settings
 
 | parameter | value | default |
 | ---------- | ---------- | ---------- |

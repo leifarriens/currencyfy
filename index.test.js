@@ -5,6 +5,7 @@ const currencyfy = {
 
 // test source version
 runTest('src');
+
 // test minified version
 runTest('dist');
 
