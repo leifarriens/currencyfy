@@ -8,7 +8,7 @@ const currencyfy = function (number, currency, options) {
   };
 
   // validate number
-  if (isNaN(number) || typeof number === 'boolean') {
+  if (isNaN(number) || typeof number === 'boolean') { // typeof check is needed because isNaN(boolean) return false
     // invalid number
     console.error(`"${number}" is not a valid number`);
     return '';
@@ -17,7 +17,7 @@ const currencyfy = function (number, currency, options) {
 
     // validate currency
     if (!isNaN(currency)) {
-      console.error(`"${currency}" is not a valid currency. You may have written your decimal separator as "," instead of "."`);
+      console.error(`"${currency}" is not a valid currency`);
       return '';
     } else {
       // check for options

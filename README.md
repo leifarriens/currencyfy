@@ -21,13 +21,13 @@ Or manually [download](https://github.com/leifarriens/currencyfy/blob/master/cur
 Import
 
 ```javascript
-import currencyfy from 'currencyfy'
+import currencyfy from 'currencyfy';
 ```
 
 Require
 
 ```javascript
-const currencyfy = require('currencyfy')
+const currencyfy = require('currencyfy');
 ```
 
 Or link `currencyfy.min.js` in your HTML:
