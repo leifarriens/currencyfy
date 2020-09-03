@@ -10,10 +10,14 @@
   },
   "homepage": "https://github.com/leifarriens/currencyfy#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/leifarriens/currencyfy.git"
+    "type": "git",
+    "url": "https://github.com/leifarriens/currencyfy.git"
   },
-  "keywords": ["currency", "number", "convert"],
+  "keywords": [
+    "currency",
+    "number",
+    "convert"
+  ],
   "author": "Leif Arriens",
   "license": "MIT"
 }
