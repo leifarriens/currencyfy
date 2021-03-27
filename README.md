@@ -1,6 +1,6 @@
 # currencyfy
 
-_convert numbers to displayable currency_
+convert numbers to displayable currency
 
 `currencyfy` will convert your numbers to currency
 
@@ -9,36 +9,30 @@ _convert numbers to displayable currency_
 This is a [Node.js](https://nodejs.org) module available through the [npm registry](https://www.npmjs.com/). Installation is done using the `npm install` command:
 
 ```bash
-$ npm install currencyfy
+npm install currencyfy
 ```
 
 Or manually [download](https://github.com/leifarriens/currencyfy/blob/master/currencyfy.min.js) it.
 
 ## Usage
 
-1. Include `currencyfy`
+### 1. Include `currencyfy`
 
 Import
 
-```javascript
-import currencyfy from 'currencyfy';
+```js
+import { currencyfy } from 'currencyfy';
 ```
 
 Require
 
-```javascript
-const currencyfy = require('currencyfy');
+```js
+const { currencyfy } = require('currencyfy');
 ```
 
-Or link `currencyfy.min.js` in your HTML:
+### 2. Currencyfy your number
 
-```html
-<script src="currencyfy.min.js">
-```
-
-2. Currencyfy your number
-
-```javascript
+```js
 currencyfy(19.9, '€');
 ```
 
@@ -48,11 +42,11 @@ converts to
 19,90 €
 ```
 
+### Custom settings
 
-#### Custom settings
-```javascript
+```js
 currencyfy(23, '€', {
-  before: true,
+  before: true
 });
 ```
 
@@ -62,10 +56,9 @@ converts to
 € 23,-
 ```
 
-
-| parameter | value | default |
-| ---------- | ---------- | ---------- |
-| `before`   | `boolean`  | `false`    | 
-| `gap`      | `boolean`  | `true`     | 
-| `showzero` | `boolean`  | `false`    | 
-| `spacer`   | `string`   | `,`        | 
+| parameter  | value     | default |
+| ---------- | --------- | ------- |
+| `before`   | `boolean` | `false` |
+| `gap`      | `boolean` | `true`  |
+| `showzero` | `boolean` | `false` |
+| `spacer`   | `string`  | `,`     |
