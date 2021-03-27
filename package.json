@@ -1,6 +1,6 @@
 {
   "name": "currencyfy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "convert numbers to displayable currency",
   "main": "index.js",
   "module": "lib/index.js",
