@@ -11,7 +11,71 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.currencyfy = void 0;
+exports.currencyfy = exports.CurrencyfyClass = exports.Currencyfy = void 0;
+// Wrapper function for Class
+function Currencyfy(amount, currency, options) {
+    return new CurrencyfyClass(amount, currency, options);
+}
+exports.Currencyfy = Currencyfy;
+var CurrencyfyClass = /** @class */ (function () {
+    function CurrencyfyClass(amount, currency, options) {
+        var defaultSettings = {
+            before: true,
+            gap: true,
+            showzero: false
+        };
+        this.amount = parseFloat(amount.toString().replace(',', '.'));
+        this.currency = currency;
+        this.options = __assign(__assign({}, defaultSettings), options);
+    }
+    CurrencyfyClass.prototype.validate = function (value) {
+        if (typeof value === 'string') {
+            return parseFloat(parseFloat(value).toFixed(2));
+        }
+        return parseFloat(value.toFixed(2));
+    };
+    CurrencyfyClass.prototype.format = function () {
+        var amountString = this.getAmount();
+        var _a = this.options, before = _a.before, gap = _a.gap;
+        var gapString = gap ? ' ' : '';
+        return before
+            ? "" + this.currency + gapString + amountString
+            : "" + amountString + gapString + this.currency;
+    };
+    CurrencyfyClass.prototype.toNumberForMath = function (arg) {
+        switch (typeof arg) {
+            case 'object':
+                return arg.amount;
+            case 'number':
+                return arg;
+            case 'string':
+                return parseFloat(arg.replace(',', '.'));
+            default:
+                throw new Error('ABLDI');
+        }
+    };
+    CurrencyfyClass.prototype.add = function (arg) {
+        this.amount = this.validate(this.amount + this.toNumberForMath(arg));
+        return this;
+    };
+    CurrencyfyClass.prototype.subtract = function (arg) {
+        this.amount = this.validate(this.amount - this.toNumberForMath(arg));
+        return this;
+    };
+    CurrencyfyClass.prototype.multiply = function (multiplyer) {
+        this.amount = this.validate(this.amount * multiplyer);
+        return this;
+    };
+    CurrencyfyClass.prototype.allocate = function (value) {
+        this.amount = this.validate(value);
+        return this;
+    };
+    CurrencyfyClass.prototype.getAmount = function () {
+        return this.amount.toFixed(2).toString().replace('.', ',');
+    };
+    return CurrencyfyClass;
+}());
+exports.CurrencyfyClass = CurrencyfyClass;
 function currencyfy(number, currency, options) {
     if (currency === void 0) { currency = ''; }
     var settings = __assign({ 
