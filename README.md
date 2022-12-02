@@ -1,5 +1,7 @@
 # currencyfy
 
+:warning: **Recommended and standardized way of formatting currency**: [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+
 convert numbers to displayable currency
 
 `currencyfy` will convert your numbers to currency
